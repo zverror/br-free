@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  baserow:
+    container_name: baserow
+    build: .  # Используем локальный Dockerfile вместо image
+    environment:
+      BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
+    ports:
+      - '8280:80'
+      - '82ß43:443'
+    volumes:
+      - 'baserow_data:/baserow/data'
+    dns:
+      - 83.220.169.155
+      - 212.109.195.93
+volumes:
+  baserow_data: null
