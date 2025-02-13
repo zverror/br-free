@@ -8,6 +8,9 @@ RUN npm config set registry https://registry.npmjs.org/ && \
     npm config set fetch-retry-mintimeout 10000 && \
     npm install --save-dev @nuxtjs/stylelint-module --legacy-peer-deps
 
+# Копируем supervisor скрипты
+COPY supervisor /baserow/supervisor/
+
 # Копируем наши модифицированные файлы
 COPY premium/backend/src/baserow_premium/license/handler.py /baserow/backend/src/baserow_premium/license/handler.py
 COPY premium/web-frontend/modules/baserow_premium/components/PremiumModal.vue /baserow/web-frontend/modules/baserow_premium/components/PremiumModal.vue
