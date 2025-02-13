@@ -20,6 +20,3 @@ RUN npm run build
 
 # Очищаем dev-зависимости после сборки
 RUN npm prune --production --legacy-peer-deps
-
-# Перезапускаем сервисы
-RUN supervisorctl restart all
