@@ -1,0 +1,10 @@
+.link-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-element__link {
+  font-size: 14px;
+  color: $black;
+  text-decoration: underline;
+}

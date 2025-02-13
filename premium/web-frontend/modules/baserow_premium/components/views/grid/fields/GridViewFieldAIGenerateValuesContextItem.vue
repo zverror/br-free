@@ -60,7 +60,6 @@ export default {
       )
     },
     hasPremium() {
-      // Always return true to enable premium features
       return true
     },
   },

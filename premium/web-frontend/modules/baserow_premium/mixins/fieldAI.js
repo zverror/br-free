@@ -25,13 +25,10 @@ export default {
       )
     },
     isDeactivated() {
-      // Always return false to enable premium features
       return false
     },
     deactivatedClickComponent() {
-      return this.$registry
-        .get('field', this.field.type)
-        .getDeactivatedClickModal(this.workspaceId)
+      return null
     },
   },
   watch: {

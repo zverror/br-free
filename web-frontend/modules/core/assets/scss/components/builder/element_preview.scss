@@ -1,0 +1,186 @@
+.element-preview__menu {
+  display: flex;
+  flex-wrap: nowrap;
+  border: solid 1px $color-neutral-400;
+  z-index: 2;
+
+  @include absolute(5px, 5px, auto, auto);
+  @include rounded($rounded);
+}
+
+.element-preview__insert,
+.element-preview__menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 200ms, opacity 0s linear 200ms;
+}
+
+.element-preview__insert {
+  display: block;
+  line-height: 0px;
+  padding: 8px;
+  border-radius: 100%;
+  border: solid 1px $color-neutral-400;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  color: $color-neutral-900;
+  background-color: $white;
+
+  &:hover {
+    background-color: $color-neutral-50;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.32);
+  }
+
+  &--top,
+  &--bottom {
+    @include absolute(-13px, auto, auto, 50%);
+
+    font-size: 11px;
+    margin-left: -12px;
+    z-index: 1;
+  }
+
+  &--bottom {
+    top: auto;
+    bottom: -12px;
+  }
+}
+
+.element-preview {
+  position: relative;
+
+  &:hover {
+    & > .element-preview__insert,
+    & > .element-preview__menu {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+    }
+  }
+
+  &:not(.element-preview--active) {
+    cursor: pointer;
+  }
+
+  &.element-preview--active {
+    cursor: inherit;
+
+    &::before {
+      @include absolute(0, 0, 0, 0);
+
+      content: '';
+      border: solid 1px $color-primary-500;
+      pointer-events: none;
+
+      .page__header &,
+      .page__footer & {
+        border-color: $palette-purple-500;
+      }
+    }
+  }
+
+  &.element-preview--parent-of-selected {
+    cursor: inherit;
+
+    &::before {
+      @include absolute(0, 0, 0, 0);
+
+      content: '';
+      border: solid 1px $palette-neutral-300;
+      pointer-events: none;
+    }
+  }
+
+  :not(.element-preview--not-visible) &--not-visible .element__wrapper {
+    opacity: 0.5;
+    filter: blur(1px);
+  }
+}
+
+.element-preview__name {
+  @include elevation($elevation-low);
+  @include absolute(-26px, auto, auto, 5px);
+  @include rounded($rounded-3xl);
+
+  font-size: 10px;
+  background-color: $palette-blue-500;
+  color: $white;
+  cursor: default;
+  padding: 4px 8px;
+  z-index: 1;
+
+  .page__header &,
+  .page__footer & {
+    background-color: $palette-purple-500;
+  }
+
+  .element-preview--first-element & {
+    @include absolute(auto, auto, -26px, 5px);
+  }
+}
+
+.element-preview__menu-item-description {
+  @include absolute(-25px, -2px, auto, auto);
+
+  display: none;
+  background-color: $color-neutral-900;
+  font-size: 11px;
+  color: $white;
+  line-height: 20px;
+  padding: 0 4px;
+  white-space: nowrap;
+
+  @include rounded($rounded);
+
+  .element-preview--first-element & {
+    top: 30px;
+  }
+}
+
+.element-preview__menu-item {
+  display: flex;
+  position: relative;
+  background-color: $white;
+  color: $color-neutral-900;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $color-neutral-100;
+
+    .element-preview__menu-item-description {
+      display: block;
+    }
+  }
+
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &--disabled {
+    cursor: inherit;
+    color: $color-neutral-400;
+    pointer-events: none;
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+}
+
+.element-preview__error-icon {
+  font-size: 20px;
+  color: $color-error-300;
+  pointer-events: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

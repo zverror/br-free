@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-17 08:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/baserow_enterprise/audit_log/job_types.py:36
+msgid "User Email"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/job_types.py:40
+msgid "User ID"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/job_types.py:44
+msgid "Group Name"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/job_types.py:48
+msgid "Group ID"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/job_types.py:52
+msgid "Action Type"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/job_types.py:56
+msgid "Description"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/job_types.py:60
+msgid "Timestamp"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/job_types.py:64
+msgid "IP Address"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/models.py:30
+msgid "DONE"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/models.py:31
+msgid "UNDONE"
+msgstr ""
+
+#: src/baserow_enterprise/audit_log/models.py:32
+msgid "REDONE"
+msgstr ""
+
+#: src/baserow_enterprise/role/actions.py:28
+msgid "Assign multiple roles"
+msgstr ""
+
+#: src/baserow_enterprise/role/actions.py:29
+msgid "Multiple roles have been assigned"
+msgstr ""
+
+#: src/baserow_enterprise/role/actions.py:32
+#, python-format
+msgid ""
+"Role %(role_uid)s assigned to subject type "
+"\"%(subject_type_name)s\" (%(subject_id)s) on scope type "
+"\"%(scope_type_name)s\" (%(scope_id)s)."
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:21
+#, python-format
+msgid "in team \"%(team_name)s\" (%(team_id)s) "
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:27
+msgid "Create team"
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:28
+#, python-format
+msgid "Team \"%(name)s\" (%(team_id)s) created."
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:105
+msgid "Update team"
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:106
+#, python-format
+msgid "Team \"%(name)s\" (%(team_id)s) updated."
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:203
+msgid "Delete team"
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:204
+#, python-format
+msgid "Team \"%(team_name)s\" (%(team_id)s) deleted."
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:253
+msgid "Create team subject"
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:253
+#, python-format
+msgid "Subject (%(subject_id)s) created"
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:338
+msgid "Delete team subject"
+msgstr ""
+
+#: src/baserow_enterprise/teams/actions.py:339
+#, python-format
+msgid "Subject (%(subject_id)s) deleted"
+msgstr ""

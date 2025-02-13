@@ -1,0 +1,34 @@
+.formula-input-field {
+  height: auto;
+  font-size: 13px;
+  min-height: 38px;
+  padding: 5px 12px;
+  line-height: 25px;
+
+  &.formula-input-field--large {
+    line-height: 25px;
+    padding: 10px 12px;
+    min-height: 48px;
+  }
+}
+
+.formula-input-field--focused {
+  border-color: $color-primary-500;
+}
+
+.formula-input-field--disabled {
+  user-select: none;
+}
+
+.formula-input-field__reset-button {
+  width: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ProseMirror div.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: $color-neutral-500;
+  pointer-events: none;
+  height: 0;
+}

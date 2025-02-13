@@ -253,12 +253,11 @@ export class AIFieldType extends FieldType {
   }
 
   isDeactivated(workspaceId) {
-    // Always return false to disable premium check
     return false
   }
 
   getDeactivatedClickModal(workspaceId) {
-    return PremiumModal
+    return null
   }
 }
 

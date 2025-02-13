@@ -1,0 +1,354 @@
+{
+    "premium": {
+        "viewType": {
+            "kanban": "Kanban",
+            "calendar": "Calendrier",
+            "timeline": "Chronologie"
+        },
+        "exporterType": {
+            "json": "Exporter vers JSON",
+            "xml": "Exporter vers XML",
+            "excel": "Exporter vers Excel"
+        },
+        "deactivated": "Disponible en version premium",
+        "adminType": {
+            "licenses": "Gérer les licences"
+        }
+    },
+    "rowCommentSidebar": {
+        "onlyPremium": "Les commentaires de lignes sont disponibles dans la version premium.",
+        "readOnlyNoComment": "Aucun commentaire pour cette ligne.",
+        "noComment": "Aucun commentaire pour cette ligne. Utilisez le formulaire ci-dessous pour ajouter un commentaire.",
+        "comment": "Commentaire",
+        "more": "Plus d'informations",
+        "name": "Commentaires"
+    },
+    "rowComment": {
+        "you": "Vous",
+        "anonymous": "Anonyme",
+        "deleting": "suppression",
+        "created": "créé",
+        "commentTrashed": "Ce commentaire a été supprimé.",
+        "errorUserNotCommentAuthorTitle": "Impossible de mettre à jour ou de supprimer.",
+        "errorUserNotCommentAuthor": "Seul l’auteur du commentaire peut le mettre à jour ou le supprimer.",
+        "creating": "création",
+        "updating": "mise à jour",
+        "edited": "édité",
+        "errorInvalidCommentMentionTitle": "Mention invalide",
+        "errorInvalidCommentMention": "L’utilisateur mentionné n’existe pas."
+    },
+    "registerLicenseModal": {
+        "titleRegisterLicense": "Activer une licence",
+        "registerLicense": "Activer la licence",
+        "viewPricing": "Consultez les tarifs",
+        "licenseDescription": "Une licence peut-être obtenue uniquement sur baserow.io. Si vous avez déjà acheté une licence, elle vous sera envoyée par email et vous pourrez la consulter dans votre compte. Copiez-collez la clé de licence dans le champ ci-dessous et cliquez sur le bouton afin d'activer la licence pour cette instance de Baserow. Il n'est pas possible d'utiliser la même clé pour plusieurs instances. {pricingLink} si vous n'avez pas encore de clé.",
+        "licenseError": {
+            "invalidTitle": "Invalide",
+            "invalid": "La licence fournie est invalide.",
+            "unsupportedTitle": "Non supportée",
+            "unsupported": "La licence fournie est incompatible avec la version actuelle de Baserow. Veuillez mettre à jour votre instance avec la dernière version et essayez de nouveau.",
+            "expiredTitle": "Expirée",
+            "expired": "La licence fournie a expiré.",
+            "duplicateTitle": "Déja enregistrée",
+            "duplicate": "La licence fournie est déjà enregistrée sur cette instance.",
+            "instanceMismatchTitle": "Instance incorrecte",
+            "instanceMismatch": "La licence fournie n'a pas été créée pour cette instance."
+        }
+    },
+    "disconnectLicenseModal": {
+        "disconnectLicense": "Déconnecter la licence",
+        "disconnectDescription": "Êtes-vous sur·e de vouloir déconnecter la licence ? Si vous déconnectez la licence alors que celle-ci est active, les utilisateurs associés n'auront plus accès aux fonctionnalités qu'elle offre. Cela retire définitivement la licence. Veuillez contacter notre support via {contact} si vous souhaitez utiliser cette licence sur une autre instance hebergée."
+    },
+    "registerLicenseForm": {
+        "licenseKey": "Clé de licence"
+    },
+    "tableJSONExporter": {
+        "encoding": "Encodage"
+    },
+    "tableXMLExporter": {
+        "encoding": "Encodage"
+    },
+    "kanbanViewStackContext": {
+        "createCard": "Créer une carte",
+        "editStack": "Modifier la colonne",
+        "deleteStack": "Supprimer la colonne",
+        "delete": "Supprimer {name}",
+        "deleteDescription": "Êtes-vous sur·e de vouloir supprimer la colonne {name} ? Supprimer une valeur revient à supprimer l'option correspondante de la liste déroulante, ce qui peut impliquer une perte d'information car les lignes contenant cette valeur auront désormais une valeur vide à la place pour ce champ."
+    },
+    "kanbanViewHeader": {
+        "stackBy": "Regrouper par",
+        "stackedBy": "Regroupé par {fieldName}",
+        "customizeCards": "Configurer les cartes"
+    },
+    "kanbanViewOptionForm": {
+        "selectOption": "Nom de la colonne"
+    },
+    "kanbanViewStakedBy": {
+        "title": "Champ de regroupement",
+        "chooseField": "Par quel champ de type « liste déroulante » souhaitez-vous regrouper vos cartes ?"
+    },
+    "kanbanViewStack": {
+        "uncategorized": "Sans catégorie",
+        "tryAgain": "Essayer encore",
+        "new": "Nouveau"
+    },
+    "licenses": {
+        "titleNoLicenses": "Aucune licences trouvée",
+        "titleLicenses": "Licences",
+        "noLicensesDescription": "Votre instance de Baserow n'a aucune licence enregistrée. Une licence premium vous donne immédiatement accès à plusieurs fonctionnalités additionnelles. Si vous avez déjà une licence, vous pouvez l'enregistrer ici. Vous pouvez également en obtenir une en cliquant sur le bouton ci-dessous.",
+        "rowComments": "Commentaires par lignes",
+        "kanbanView": "Vue Kanban",
+        "exports": "Export JSON et XML",
+        "admin": "Interface d'administration",
+        "rowColoring": "Coloration des lignes",
+        "getLicense": "Obtenir une licence",
+        "baserowInstanceId": "Votre identifiant d'instance Baserow est :",
+        "registerLicense": "Activer une licence",
+        "licenceId": "Numéro de licence",
+        "premium": "Premium",
+        "expired": "Expirée",
+        "validity": "Valide du {start} au {end}",
+        "seats": "places",
+        "premiumFeatures": "Fonctionnalités premium"
+    },
+    "license": {
+        "title": "Plan {name}",
+        "users": "Utilisateurs",
+        "description": "Choisissez les utilisateurs qui peuvent utiliser les fonctionnalités du plan {product_code}. Cette licence vous permet de distribuer le plan {product_code} à un maximum de {seats} utilisateurs.",
+        "seatLeft": "Vous n'avez plus de place disponible|Il reste une seule place|Il reste {count} places",
+        "fillSeats": "Distribuer les places aux utilisateurs restants",
+        "removeAll": "Enlever tous les utilisateurs",
+        "licenseId": "Numéro de licence",
+        "addUser": "Ajouter un utilisateur",
+        "plan": "Plan",
+        "premium": "premium",
+        "expired": "Expirée",
+        "validFrom": "Début de validité",
+        "validThrough": "Fin de validité",
+        "validThroughDescription": "Quand la licence expire, les utilisateurs associés n'auront plus accès aux fonctionnalités offertes par la licence.",
+        "lastCheck": "Dernière vérification",
+        "lastCheckDescription": "La licence est vérifiée régulièrement. Si vous avez, par exemple, renouvelé ou mis à jour votre licence, les changements ne deviennent actifs qu'après la vérification.",
+        "checkNow": "Vérifier maintenant",
+        "seats": "Places (nombre d'utilisateur max.)",
+        "licensedTo": "Attribuée à",
+        "premiumFeatures": "Fonctionnalités premium",
+        "applications": "Applications / Bases de données",
+        "unlimited": "Illimité",
+        "rowUsage": "Nombre de ligne",
+        "storeUsage": "Espace disponible",
+        "disconnectLicense": "Déconnecter la licence",
+        "disconnectDescription": "Si vous déconnectez la licence alors que celle-ci est active, les utilisateurs associés n'auront plus accès aux fonctionnalités qu'elle offre. Cela retire définitivement la licence. Veuillez contacter notre support via {contact} si vous souhaitez utiliser cette licence sur une autre instance hebergée.",
+        "moreSeatsNeededTitle": "Besoin de plus d´utilisateurs",
+        "automaticSeatsProgressBarStatus": "{seats_taken} / {seats} utilisateurs payants et {free_users_count} utilisateurs gratuits",
+        "contactSalesMoreSeats": "Contacter un Vendeur pour plus d´utilisateurs",
+        "premiumFeatureName": "Premium",
+        "supportFeatureName": "Support",
+        "enterpriseFeatureName": "Enterprise"
+    },
+    "viewDecoratorType": {
+        "onlyOneDecoratorPerView": "Vous ne pouvez utiliser qu'une seule décoration de ce type par vue",
+        "onlyForPremium": "Disponible en version Premium",
+        "leftBorderColorDescription": "Ajoute un bord de couleur à gauche de l'enregistrement",
+        "leftBorderColor": "Bord gauche",
+        "backgroundColor": "Couleur de fond",
+        "backgroundColorDescription": "Change la couleur de fond d'un enregistrement"
+    },
+    "singleSelectColorValueProviderForm": {
+        "chooseAColor": "Par quelle liste déroulante l'enregistrement doit-il être coloré ?"
+    },
+    "decoratorValueProviderType": {
+        "conditionalColorDescription": "Définie une couleur quand l'enregistrement respecte des conditions",
+        "singleSelectColorDescription": "Utilise la même couleur que celle définie pour une liste déroulante",
+        "singleSelectColor": "Liste déroulante",
+        "conditionalColor": "Par conditions"
+    },
+    "conditionalColorValueProviderForm": {
+        "addColor": "Ajouter une couleur",
+        "addCondition": "Ajouter une condition",
+        "colorAlwaysApply": "Vous pouvez ajouter des conditions en cliquant sur le bouton « Ajouter une condition ».",
+        "title": "Couleurs",
+        "deleteColor": "Supprimer la couleur",
+        "colorAlwaysApplyTitle": "Cette couleur s'applique par défaut.",
+        "addConditionGroup": "Ajouter un groupe de condition"
+    },
+    "redirectToBaserowModal": {
+        "title": "Redirection vers https://baserow.io",
+        "content": "Vous allez quitter votre instance auto-hébergée et être redirigé vers https://baserow.io."
+    },
+    "premiumTopSidebar": {
+        "impersonateDescription": "L’identité de ce compte est usurpée. Une actualisation de la page l’arrêtera.",
+        "impersonateStop": "Arrêter",
+        "premium": "Premium",
+        "premiumDescription": "Votre compte a accès aux fonctionnalités premium globalement"
+    },
+    "premiumModal": {
+        "viewPricing": "Voir les prix",
+        "title": "Mise à niveau pour utiliser : {name}",
+        "description": "Votre compte n'a pas accès aux fonctionnalités premium. Passez à la version premium pour commencer à utiliser {nom}. Vous pouvez mettre votre compte à niveau en obtenant une licence. Cliquez sur le bouton ci-dessous pour voir les prix."
+    },
+    "premiumFeatures": {
+        "kanbanView": "Vue Kanban",
+        "rowComments": "Commentaires de ligne",
+        "exports": "Export JSON et XML",
+        "admin": "Administration avancée",
+        "rowColoring": "Coloration des lignes",
+        "surveyForm": "Formulaire de sondage",
+        "publicLogoRemoval": "Suppression du logo public",
+        "personalViews": "Vues privées",
+        "calendarView": "Vue Calendrier",
+        "aiFeatures": "Champ IA",
+        "timelineView": "Vue chronologique"
+    },
+    "formViewModePreviewSurvey": {
+        "deactivated": "Les sondage sont disponibles dans la version premium.",
+        "orderFields": "Ordonner les champs",
+        "more": "Plus d'informations"
+    },
+    "formViewModeType": {
+        "onlyForPremium": "Disponible en version premium",
+        "survey": "Sondage",
+        "surveyDescription": "Un seul champ est visible à la fois."
+    },
+    "shareLinkOptions": {
+        "baserowLogo": {
+            "label": "Masquer le logo Baserow sur la vue partagée",
+            "premiumModalName": "suppression du logo public"
+        }
+    },
+    "viewsContext": {
+        "personal": "Privée"
+    },
+    "calendarViewHeader": {
+        "displayBy": "Afficher par",
+        "displayedBy": "Affiché par le champ « {fieldName} »",
+        "labels": "Étiquettes"
+    },
+    "calendarMonthDay": {
+        "hiddenRowsCount": "0 | 1 de plus... | {hiddenRowsCount} de plus..."
+    },
+    "selectDateFieldModal": {
+        "chooseDateField": "Choix du champ de date",
+        "save": "Enregistrer"
+    },
+    "calendarDateSelector": {
+        "today": "Aujourd'hui"
+    },
+    "calendarMonthDayExpanded": {
+        "tryAgain": "Réessayez"
+    },
+    "dateFieldSelectForm": {
+        "dateField": "Quel champ souhaitez-vous utiliser pour cette vue ?",
+        "noCompatibleDateFields": "Il n’y a pas de champs de date dans ce tableau, veuillez d’abord en créer un."
+    },
+    "rowCommentContext": {
+        "edit": "Modifier le commentaire",
+        "delete": "Supprimer le commentaire"
+    },
+    "trashType": {
+        "row_comment": "commentaire de ligne"
+    },
+    "rowCommentMentionNotification": {
+        "title": "{sender} vous a mentionné dans la ligne {row} de la table {table}",
+        "deletedUser": "Un utilisateur a été supprimé"
+    },
+    "rowCommentNotification": {
+        "title": "{sender} a posté un commentaire pour la ligne {row} de {table}",
+        "deletedUser": "Un utilisateur a été supprimé"
+    },
+    "RowEditModalCommentNotificationMode": {
+        "modeMentionsDesc": "Vous ne recevrez les notifications uniquement lorsque vous serez mentionné·e.",
+        "modeAllTitle": "Tous les commentaires",
+        "modeAllDesc": "Vous recevrez des notifications pour tous les commentaires de cette ligne.",
+        "modeMentionsTitle": "Seulement les mentions"
+    },
+    "gridViewFieldAI": {
+        "generate": "Générer",
+        "regenerate": "Re-générer"
+    },
+    "premiumFieldType": {
+        "ai": "Prompt pour l'IA",
+        "aiDescription": "Champ en lecture seule contenant un texte généré par une IA en fonction du prompt définit."
+    },
+    "fieldAISubForm": {
+        "AIType": "Type d'IA",
+        "AIModel": "Modèle d'IA",
+        "prompt": "Prompt",
+        "premiumFeature": "Le champ IA est une fonctionnalité premium",
+        "emptyFileField": "Aucun(e)",
+        "fileFieldHelp": "Le premier fichier compatible dans le champ sera utilisé comme base de connaissances pour l'invite. Le fichier doit être un fichier texte avec une extension supportée comme .txt, .md, .pdf, .docx.",
+        "promptPlaceholder": "Qu'est-ce que Baserow ?",
+        "outputTypeChangedWarning": "Efface les valeurs des cellules générées.",
+        "outputTypeTooltip": "Sélectionnez le format de sortie souhaité pour aider le LLM à générer des réponses correspondant aux options désirées.",
+        "outputType": "Format du résultat"
+    },
+    "rowEditFieldAI": {
+        "createRowBefore": "La valeur du champ IA peut être générée après la création de la ligne.",
+        "generate": "Générer"
+    },
+    "functionalGridViewFieldAI": {
+        "generate": "Générer"
+    },
+    "aiFormulaModal": {
+        "title": "Générer une formule à l'aide de l'IA",
+        "description": "Notez que les formules générées ne fonctionnent pas toujours comme prévu. Nous construisons un prompt pour le modèle et nous utilisons le résultat en tant que formule. Cela fonctionne mieux avec un modèle puissant comme le modèle *gpt-4-turbo-preview*.",
+        "noModels": "Aucun modèle d'IA n'est configuré dans votre instance et votre projet Baserow. Cliquez sur les trois points à côté de votre espace de travail, puis sur les paramètres pour en configurer.",
+        "label": "Prompt",
+        "labelDescription": "Décrivez la formule que vous souhaitez générer",
+        "generate": "Générer"
+    },
+    "formulaFieldAI": {
+        "generateWithAI": "Générer à l'aide de l'IA",
+        "featureName": "Générer une formule à l'aide de l'IA"
+    },
+    "calendarViewType": {
+        "sharedViewEnableSyncToExternalCalendar": "Synchronisation avec un calendrier externe",
+        "sharedViewDisableSyncToExternalCalendar": "Désactiver la synchronisation externe",
+        "sharedViewDescription": "Copier-Coller ce lien dans votre application de calendrier",
+        "sharedViewTitle": "Synchronisation vers un calendrier externe",
+        "sharedViewText": "Permettre à quiconque de consulter les données de cette vue ou synchroniser les événements avec un calendrier externe."
+    },
+    "timelineViewHeader": {
+        "dateSettings": "Paramètres de date",
+        "labels": "Étiquettes"
+    },
+    "selectDateFieldContext": {
+        "save": "Enregistrer"
+    },
+    "timelineDateSettingsForm": {
+        "startDateField": "Date de début",
+        "endDateField": "Date de fin",
+        "incompatibleFieldsErrorTitle": "Champs incomptabiles",
+        "includeTime": "date et heure",
+        "dateOnly": "date seulement",
+        "noCompatibleDateFields": "Aucun champs date dans la table. Ajoutez un champs date de début et de fin dans la table pour commencer.",
+        "incompatibleFieldsErrorMessage": "Les champs sont incompatibles.Choisissez deux champs dates valides qui utilisent le même paramètre d'inclusion de l'heure et la même timezone pour tous les collaborateurs.",
+        "forceTimezone": "{timezone}"
+    },
+    "initTimelineViewSettings": {
+        "settings": "Paramètres de date"
+    },
+    "viewDateSelector": {
+        "today": "Aujourd'hui"
+    },
+    "timelineGridRow": {
+        "days": "0 | 1 jour | {count} jours"
+    },
+    "timelineTimescaleContext": {
+        "hour": "Heure",
+        "day": "Jour",
+        "week": "Semaine",
+        "month": "Mois",
+        "quarter": "Trimestre",
+        "year": "Année",
+        "disabledTooltip": "Cette option n'est disponible que pour les champs de date dont l'option `Inclure l'heure` est activée."
+    },
+    "aiOutputType": {
+        "text": "Texte",
+        "textDescription": "Génère un texte libre basé sur le prompt.",
+        "choice": "Choix",
+        "choiceDescription": "Ne choisit qu'une seule des options du champ."
+    },
+    "tableExcelExporter": {
+        "includeHeader": "Inclure les noms de champs comme en-tête"
+    }
+}

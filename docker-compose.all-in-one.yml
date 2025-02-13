@@ -1,0 +1,19 @@
+# This is the recommended way of running Baserow using docker-compose for most users.
+# See https://baserow.io/docs/installation%2Finstall-with-docker for more details.
+version: "3.4"
+services:
+  baserow:
+    container_name: baserow
+    image: baserow/baserow:latest
+    environment:
+      BASEROW_PUBLIC_URL: 'https://baserow.automateme.ru'
+    ports:
+      - "8180:80"
+      - "8143:443"
+    volumes:
+      - baserow_data:/baserow/data
+    dns:
+      - 83.220.169.155
+      - 212.109.195.93
+volumes:
+  baserow_data:

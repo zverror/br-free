@@ -1,0 +1,415 @@
+{
+    "enterprise": {
+        "license": "Enterprise",
+        "rbac": "RBAC",
+        "sso": "SSO",
+        "deactivated": "Disponible dans la version avancée/entreprise",
+        "licenseDescription": "Avoir le rôle de spectateur est inclus dans Baserow Entreprise. Si un utilisateur a un tout autre role, dans n'importe quel projet, il utilisera automatiquement un siège payant.",
+        "sidebarTooltip": "Votre compte a un accès global aux fonctions entreprise",
+        "overflowWarning": "Vous avez trop d'utilisateurs non-spectateurs et avez utilisé tous vos sièges payants. Changez les utilisateurs pour qu'ils deviennent des spectateurs sur la page des membres de chaque projet."
+    },
+    "trashType": {
+        "team": "équipe"
+    },
+    "createTeamModal": {
+        "title": "Créer une équipe",
+        "invalidNameTitle": "Veuillez utiliser un autre nom",
+        "invalidNameMessage": "Ce nom d'équipe est déjà utilisé dans le projet spécifié."
+    },
+    "updateTeamModal": {
+        "title": "Mettre à jour {teamName}",
+        "invalidNameTitle": "Veuillez utiliser un nom différent",
+        "invalidNameMessage": "Ce nom d'équipe est déjà utilisé dans le projet spécifié."
+    },
+    "manageTeamForm": {
+        "submit": "Enregistrer",
+        "roleTitle": "Rôle par défaut",
+        "inviteMembers": "Ajouter des membres",
+        "nameTitle": "Nom",
+        "membersTitle": "Membres",
+        "noSubjectsSelected": "Cliquez sur '{buttonLabel}' pour ajouter des utilisateurs optionnels à l'équipe.",
+        "roleHelpText": "Les rôles spécifiques à l’utilisateur remplaceront toujours les rôles d’équipe."
+    },
+    "editTeamContext": {
+        "edit": "Modifier l’équipe",
+        "remove": "Supprimer l'équipe"
+    },
+    "teamsTable": {
+        "title": "{teamCount} équipes dans {workspaceName}",
+        "createNew": "Créer une équipe",
+        "nameColumn": "Nom",
+        "createdColumn": "Création",
+        "subjectsColumn": "Membres",
+        "roleColumn": "Rôle par défaut",
+        "roleHelpText": "Peut être remplacé par des rôles sur les bases de données et les tableaux."
+    },
+    "subjectSampleField": {
+        "titleAttr": "{subjectCount} membres dans cette équipe."
+    },
+    "adminType": {
+        "Authentication": "Authentification",
+        "AuditLog": "Journal d’audit"
+    },
+    "auditLog": {
+        "title": "Journal d’audit",
+        "filterUserTitle": "Utilisateur",
+        "filterWorkspaceTitle": "Projet",
+        "filterActionTypeTitle": "Type d'événement",
+        "filterFromTimestampTitle": "Date de début",
+        "filterToTimestampTitle": "À ce jour",
+        "filterToTimestamp": "À ce jour",
+        "user": "Utilisateur",
+        "actionType": "Type d'événement",
+        "description": "Description",
+        "timestamp": "Horodatage",
+        "ip_address": "Adresse IP",
+        "filterFromTimestamp": "Date de début",
+        "workspace": "Projet",
+        "clearFilters": "Tout enlever",
+        "exportToCsv": "Exporter vers CSV",
+        "exportModalTitle": "Exporter vers CSV",
+        "allUsers": "Tous les utilisateurs",
+        "allWorkspaces": "Tous les projets",
+        "allActionTypes": "Tous les types d'événements",
+        "workspaceTitle": "Journal d'audit - {workspaceName}",
+        "adminTitle": "Journal d'audit"
+    },
+    "clientHandler": {
+        "cannotDisableAllAuthProvidersTitle": "Dernier fournisseur activé",
+        "cannotDisableAllAuthProvidersDescription": "Il n'est pas possible de désactiver ou de supprimer le dernier fournisseur activé."
+    },
+    "manageTeamModals": {
+        "subheading": "Teams vous permet de donner ou de restreindre des autorisations en bloc à plusieurs personnes."
+    },
+    "teamsSettings": {
+        "teamsTabTitle": "Équipes"
+    },
+    "auditLogExportModal": {
+        "exportFilename": "Journal Audit Admin Export - {date}",
+        "cancelledTitle": "Échec de l'export",
+        "title": "Exporter vers CSV",
+        "cancelledDescription": "Un problème est survenu lors de l'export du journal d'audit. Veuillez réessayer.",
+        "exportWorkspaceFilename": " Exportation du journal d'audit du projet ({workspaceId}) - {date}"
+    },
+    "authProviders": {
+        "title": "Fournisseurs d’authentification",
+        "noProviders": "Aucun fournisseur d'authentification n'est encore configuré.",
+        "addProvider": "Ajouter fournisseur"
+    },
+    "authProviderTypes": {
+        "password": "Authentification par e-mail et mot de passe",
+        "ssoSamlProviderName": "SAML SSO : {domain}",
+        "saml": "Fournisseur SAML SSO",
+        "ssoSamlProviderNameUnconfigured": "SAML SSO non configuré"
+    },
+    "editAuthProviderMenuContext": {
+        "delete": "Supprimer",
+        "edit": "Modifier"
+    },
+    "samlSettingsForm": {
+        "domain": "Domaine SAML",
+        "domainPlaceholder": "Insérez le nom de domaine de l’entreprise...",
+        "domainAlreadyExists": "Un fournisseur SAML existe déjà pour ce domaine",
+        "metadata": "Métadonnées",
+        "metadataPlaceholder": "Collez les métadonnées du fournisseur d’identité...",
+        "acsUrl": "URL du SSO",
+        "providerIsVerified": "Le fournisseur a été vérifié",
+        "invalidDomain": "Nom de domaine invalide",
+        "invalidMetadata": "Métadonnées XML non valides pour le fournisseur d'identité",
+        "relayStateUrl": "URL par défaut du relais d'état",
+        "defaultAttrs": "Par défaut",
+        "customAttrs": "Personnalisés",
+        "firstNameAttrKey": "Prénom",
+        "firstNameAttrKeyHelper": "Le prénom de l'utilisateur ou le nom complet si le \"Nom de famille\" n'est pas fourni.",
+        "lastNameAttrKeyHelper": "Nom de famille de l'utilisateur (facultatif). Effacez cette valeur pour fournir le nom complet via le champ « Prénom ».",
+        "emailAttrKeyHelper": "L'adresse électronique qui sera utilisée comme nom d'utilisateur.",
+        "samlResponseSettings": "Attributs de la réponse SAML",
+        "emailAttrKey": "Courriel",
+        "lastNameAttrKey": "Nom"
+    },
+    "createSettingsAuthProviderModal": {
+        "title": "Ajouter un nouveau {type}"
+    },
+    "updateSettingsAuthProviderModal": {
+        "title": "Modifier {name}"
+    },
+    "deleteAuthProviderModal": {
+        "comment": "Êtes-vous sûr de supprimer ce {type} ?",
+        "title": "Supprimer {name}"
+    },
+    "loginWithSaml": {
+        "signInWithSaml": "Connexion avec SAML SSO",
+        "redirecting": "Redirection vers le fournisseur d'identité...",
+        "continueWithSaml": "Continuer vers le fournisseur d’authentification SAML",
+        "requestError": "Ce domaine n’est pas configuré avec l’authentification SAML",
+        "loginText": "Vous avez déjà un mot de passe ?"
+    },
+    "loginError": {
+        "defaultErrorMessage": "il n'a pas été possible de terminer l'authentification via SSO.",
+        "errorSsoFeatureNotActive": "La fonctionnalité d’authentification unique (SSO) n’est pas active. Veuillez contacter votre administrateur.",
+        "errorUserDeactivated": "L’utilisateur a été désactivé.",
+        "errorProviderDoesNotExist": "ce fournisseur d'authentification n'existe pas ou n'est pas disponible.",
+        "errorDifferentProvider": "veuillez utiliser le fournisseur d'authentification auprès duquel vous avez créé un compte initialement.",
+        "title": "Une erreur est survenue :",
+        "help": "Veuillez contacter votre administrateur pour obtenir de l'aide.",
+        "errorInvalidSamlRequest": "La requête SAML n'est pas valide.",
+        "errorAuthFlowError": "une erreur s'est produite au cours du processus d'authentification avec le fournisseur sélectionné.",
+        "loginText": "Vous avez déjà un compte ?",
+        "errorInvalidSamlResponse": "La réponse SAML est invalide.",
+        "errorWorkspaceInvitationEmailMismatch": "votre adresse électronique ne correspond pas à l'invitation.",
+        "errorSignupDisabled": "La création de compte a été désactivée par l’administrateur."
+    },
+    "roles": {
+        "admin": {
+            "name": "Administrateur",
+            "description": "Peut configurer et modifier les projets et les applications."
+        },
+        "builder": {
+            "description": "Peut configurer et modifier les applications.",
+            "name": "Architecte"
+        },
+        "editor": {
+            "name": "Éditeur",
+            "description": "Peut modifier toutes les données, mais pas configurer les applications ou les projets."
+        },
+        "commenter": {
+            "name": "Commentateur",
+            "description": "Peut uniquement lire et commenter les données."
+        },
+        "viewer": {
+            "name": "Spectateur",
+            "description": "Peut uniquement lire les données."
+        },
+        "noAccess": {
+            "name": "Sans accès",
+            "description": "Ne peux accéder à rien."
+        },
+        "noRoleLowPriority": {
+            "name": "Aucun rôle",
+            "description": "Obtient le rôle par défaut pour le Projet définit par les équipes auxquelles il appartient."
+        }
+    },
+    "memberRolesModal": {
+        "memberRolesDatabaseTabTitle": "Base de données",
+        "memberRolesTableTabTitle": "Table actuelle",
+        "error": {
+            "title": "Impossible de récupérer les données",
+            "description": "Une erreur s’est produite lors de la récupération des données des membres."
+        }
+    },
+    "memberRolesTab": {
+        "database": {
+            "selectMembers": "Sélectionnez les membres",
+            "everyoneHasAccess": "Tous les membres du projet {name} peuvent accéder à cette base de données.",
+            "warningTitle": "D'autres utilisateurs peuvent avoir hérité de l'accès !",
+            "headerTooltip": "Les rôles de la base de données sont prioritaires sur les rôles du projet.",
+            "title": "Base de données {name}",
+            "onlyYouHaveAccess": "Vous seul pouvez accéder à cette base de données.",
+            "warningMessage": "D'autres utilisateurs peuvent avoir hérité de l'accès via leurs rôles respectifs dans le projet parent."
+        },
+        "table": {
+            "selectMembers": "Sélectionnez les membres",
+            "warningMessage": "D'autres utilisateurs peuvent avoir hérité de l'accès via leurs rôles respectifs dans le projet ou la base de données parente.",
+            "title": "Table {name}",
+            "everyoneHasAccess": "Tous les membres du projet {name} peuvent accéder à cette table.",
+            "onlyYouHaveAccess": "Vous seul pouvez accéder à cette table.",
+            "warningTitle": "D'autres utilisateurs peuvent avoir hérité de l'accès !",
+            "headerTooltip": "Les rôles de table sont prioritaires sur les rôles de projet et de base de données."
+        }
+    },
+    "memberRolesShareToggle": {
+        "label": "Partager avec tout le monde dans {name}",
+        "subLabel": "{totalUserAmount} membres du projet"
+    },
+    "memberRolesDatabaseContexItem": {
+        "label": "Gérer les membres",
+        "additionalRoles": "Autres rôles"
+    },
+    "memberRolesMembersList": {
+        "remove": "Supprimer",
+        "teamMembersCount": "{count} membres de l’équipe",
+        "adminHelpText": "Les administrateurs peuvent restreindre les rôles des autres administrateurs.",
+        "noMembers": "Aucun membre n’a été sélectionné. Utilisez le bouton de sélection pour en ajouter un."
+    },
+    "roleAssignmentModal": {
+        "subjectTypeNameTeams": "équipes",
+        "membersTab": "Membres",
+        "teamsTab": "Équipes",
+        "subjectTypeNameMembers": "membres"
+    },
+    "selectMembersList": {
+        "selectedAmountLabel": "{count} membres sélectionnés",
+        "searchPlaceholder": "Chercher des membres..."
+    },
+    "selectTeamsList": {
+        "searchPlaceholder": "Chercher des équipes...",
+        "selectedAmountLabel": "{count} équipes sélectionnées"
+    },
+    "selectSubjectsListFooter": {
+        "helpTooltip": "Les attributions de rôles aux membres sont prioritaires sur les attributions de rôles aux équipes.",
+        "invite": "Inviter {count} {type}",
+        "roleSelectorBuilderDataWarningTooltip": "Ils pourront créer des formules et des champs rapportés exposant tous les champs de toutes les tables liées.",
+        "types": {
+            "teams": "équipes",
+            "members": "membres"
+        }
+    },
+    "membersRoleField": {
+        "adminHelpText": "Les administrateurs peuvent restreindre les rôles des autres administrateurs.",
+        "noAccessHelpText": "Cet utilisateur a besoin d'un accès explicite aux ressources."
+    },
+    "membersPagePlugin": {
+        "roleHelpText": "Peut être remplacé par des rôles sur les bases de données et les tables."
+    },
+    "oauthSettingsForm": {
+        "providerName": "Nom",
+        "providerNamePlaceholder": "Nom du fournisseur",
+        "clientIdPlaceholder": "Client ID du fournisseur d'authentification",
+        "clientId": "Client ID",
+        "secretPlaceholder": "Secret du fournisseur d'authentification",
+        "baseUrl": "URL",
+        "invalidBaseUrl": "L’URL saisie n’est pas une URL de fournisseur valide",
+        "callbackUrl": "URL de callback",
+        "secret": "Secret",
+        "baseUrlPlaceholder": "URL de base du fournisseur d'authentification"
+    },
+    "loginButton": {
+        "continueWith": "Poursuivre avec"
+    },
+    "enterpriseFeatures": {
+        "sso": "Authentification unique (SSO)",
+        "rbac": "Contrôle d’accès basé sur les rôles",
+        "coBranding": "Remplacement du logo de co-branding",
+        "auditLogs": "Journaux d'audit",
+        "support": "Assistance en ligne",
+        "dataSync": "Synchronisation de données"
+    },
+    "chatwootSupportSidebarWorkspace": {
+        "directSupport": "Assistance"
+    },
+    "userTeamsField": {
+        "no_records": "Aucune équipe"
+    },
+    "memberRolesTableContexItem": {
+        "label": "Gérer les membres",
+        "additionalRoles": "Autres rôles"
+    },
+    "snapshotModalWarning": {
+        "message": "Veuillez noter qu’une sauvegarde inclura toutes les autorisations définies sur l’application et ses tables."
+    },
+    "auditLogSidebarWorkspace": {
+        "title": "Journal d’audit",
+        "deactivated": "Disponible en version avancée/entreprise"
+    },
+    "localBaserowUserSourceForm": {
+        "description": "Chaque ligne de la table est un compte utilisateur. Veuillez sélectionner les champs correspondants dans la table. Le champ « courriel » sera utilisé pour identifier l'utilisateur.",
+        "emailFieldLabel": "Sélectionner le champ courriel",
+        "noFields": "Pas de champs",
+        "nameFieldLabel": "Sélectionner le champ pour le nom",
+        "nameFieldPlaceholder": "Sélectionnez un champ...",
+        "emailFieldLabelPlaceholder": "Sélectionnez un champ...",
+        "roleFieldPlaceholder": "Sélectionnez un champ...",
+        "roleFieldLabel": "Sélectionnez le champ de rôle"
+    },
+    "localBaserowUserSourceType": {
+        "notConfigured": "Non configurée"
+    },
+    "appAuthProviderType": {
+        "localBaserowPassword": "Courriel/Mot de passe",
+        "commonSaml": "Saml SSO"
+    },
+    "localBaserowPasswordAppAuthProviderForm": {
+        "passwordFieldLabel": "Sélectionner le champ du mot de passe",
+        "noFields": "Pas de champs compatibles"
+    },
+    "enterpriseSettings": {
+        "deactivated": "Disponible pour le plan Entreprise",
+        "uploadFileButton": "Envoyer l'image",
+        "showBaserowHelpMessageDescription": "Indique si le message de demande d'aide doit être affiché sur le tableau de bord.",
+        "branding": "Image de marque",
+        "showBaserowHelpMessage": "Afficher le message d'aide",
+        "coBrandingLogo": "Logo",
+        "coBrandingLogoDescription": "Remplace le logo Baserow par une alternative co-brandée personnalisée (176x29)."
+    },
+    "enterpriseModal": {
+        "title": "Changer de plan pour utiliser : {name}",
+        "description": "Votre compte n'a pas accès aux fonctionnalités avancées/entreprise. Passez à la version avancée/entreprise pour commencer à utiliser {name}. Vous pouvez mettre à niveau votre compte en obtenant une licence. Cliquez sur le bouton ci-dessous pour voir les prix.",
+        "viewPricing": "Voir les prix",
+        "enterprise": "Enterprise",
+        "premium": "Premium"
+    },
+    "authFormElement": {
+        "email": "Courriel",
+        "password": "Mot de passe",
+        "emailPlaceholder": "Saisissez votre courriel...",
+        "passwordPlaceholder": "Saisissez votre mot de passe...",
+        "selectOrConfigureUserSourceFirst": "Choisissez une source d'utilisateurs pour commencer à utiliser ce formulaire d'authentification."
+    },
+    "authFormElementForm": {
+        "userSource": "Source d'utilisateur",
+        "loginButtonLabelPlaceholder": "Saisissez le libellé...",
+        "loginButtonLabel": "Libéllé du bouton de connexion"
+    },
+    "enterpriseDataSyncType": {
+        "localBaserowTable": "Synchroniser la table Baserow",
+        "jiraIssues": "Synchroniser les tickets Jira",
+        "githubIssues": "Synchroniser les tickets GitHub",
+        "gitlabIssues": "Synchroniser les tickets GitLab",
+        "hubspotContacts": "Synchroniser les contacts HubSpot"
+    },
+    "localBaserowTableDataSync": {
+        "name": "ID table source",
+        "authorizing": "Vous autorisez votre compte à sélectionner les données de la table source.",
+        "workspace": "Projet",
+        "table": "Table",
+        "database": "Base de données"
+    },
+    "exportWorkspaceModalWarning": {
+        "message": "Sachez qu'un export ne contiendra pas les autorisations définies pour l'application."
+    },
+    "jiraIssuesDataSync": {
+        "projectKey": "Clé du projet Jira (facultatif)",
+        "apiTokenHelper": "Le jeton d'API du compte Jira utilisé pour l'authentification. Il peut être créé à l'adresse https://id.atlassian.com/manage-profile/security/api-tokens.",
+        "jiraUrl": "URL de l'instance Jira",
+        "urlHelper": "L'URL de base de votre instance Jira (par exemple, https://your-domain.atlassian.net).",
+        "projectKeyHelper": "La clé de projet du projet Jira (par exemple, PROJ). On peut la trouver en cliquant sur \"Paramètres du projet\" dans Jira. Si elle n'est pas fournie, touts les tickets seront renvoyés.",
+        "jiraUsername": "Nom d'utilisateur Jira",
+        "usernameHelper": "Le nom d'utilisateur du compte Jira utilisé pour l'authentification. Il s'agit de l'email que vous utilisez pour vous connecter.",
+        "apiToken": "Jeton d'API Jira"
+    },
+    "githubIssuesDataSync": {
+        "ownerHelper": "Nom d'utilisateur ou propriétaire du dépôt. Typiquement dans le coin supérieur gauche `Propriétaire / dépôt`",
+        "repo": "Dépôt",
+        "repoHelper": "Le nom du dépôt. Typiquement dans le coin supérieur gauche `propriétaire / dépôt`",
+        "apiToken": "Jeton d'API",
+        "apiTokenHelper": "Peut être généré ici https://github.com/settings/tokens en cliquant sur `Générer un nouveau jeton`, sélectionnez `Tous les dépôts`, puis sous `Autorisations du dépôt` mettez `Tickets` à `Lecture-seule`.",
+        "owner": "Propriétaire"
+    },
+    "gitlabIssuesDataSync": {
+        "url": "URL de base",
+        "urlHelper": "L'URL de base de votre instance GitLab. (par exemple https://gitlab.com)",
+        "accessTokenHelper": "Peut être généré ici https://gitlab.com/-/user_settings/personal_access_tokens en cliquant sur `Ajouter nouveau jeton`, sélectionnez `lire_api`.",
+        "projectIdHelper": "L'ID du projet à partir duquel vous souhaitez synchroniser les tickets. Vous pouvez le trouver en allant sur la page de votre projet (par exemple https://gitlab.com/baserow/baserow), en cliquant sur les trois points dans le coin supérieur droit, puis sur \"Copier l'ID du projet : 12345678'.",
+        "accessToken": "Jeton d'accès",
+        "projectId": "ID du projet"
+    },
+    "samlAuthLink": {
+        "placeholderWithSaml": "{login} avec SAML",
+        "provideEmail": "Indiquez l'adresse courriel de votre compte SAML",
+        "loginWithSaml": "Se connecter avec SAML",
+        "emailPlaceholder": "Saisissez votre courriel..."
+    },
+    "commonSamlSettingModal": {
+        "acsTitle": "URL d'authentification par domaine (Cliquez pour copier)",
+        "title": "Éditer le fournisseur d'identité",
+        "relayStateTitle": "Relay State URL par défaut par domaine (Cliquez pour copier)",
+        "preview": "Aperçu"
+    },
+    "hubspotContactsDataSync": {
+        "accessTokenHelper": "Pour générer un jeton d'accès à une application privée dans HubSpot, cliquez sur Paramètres dans la barre supérieure, naviguez vers Intégrations > Apps privées, et créez une nouvelle application privée. Attribuez les portées suivantes : crm.objects.contacts.read, crm.schemas.contacts.read, et crm.objects.custom.read. Enfin, cliquez sur Créer une application pour générer le jeton.",
+        "accessToken": "Jeton d'accès à l'application privée"
+    },
+    "commonSamlSettingForm": {
+        "authProviderInError": "Veuillez modifier ce fournisseur pour corriger l'erreur."
+    }
+}

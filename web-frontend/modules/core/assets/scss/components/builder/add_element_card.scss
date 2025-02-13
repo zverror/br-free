@@ -1,0 +1,32 @@
+.add-element-card {
+  border: solid $color-neutral-400 1px;
+  padding: 10px 15px;
+  width: 133px;
+  cursor: pointer;
+
+  @include rounded($rounded-md);
+
+  &:hover {
+    background-color: $color-neutral-100;
+    text-decoration: none;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background-color: $color-neutral-100;
+  }
+}
+
+.add-element-card__description {
+  font-size: 11px;
+  color: $color-neutral-400;
+}
+
+.add-element-card__element-type {
+  @include flex-align-items(4px);
+}
+
+.add-element-card__element-type-icon {
+  font-size: 16px;
+}
