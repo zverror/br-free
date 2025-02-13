@@ -45,9 +45,9 @@ services:
       - '8280:80'
       - '8243:443'
     volumes:
-      - caddy_config:/config
-      - caddy_data:/data
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
     restart: unless-stopped
     depends_on:
       - backend
