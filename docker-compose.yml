@@ -7,7 +7,7 @@ services:
       BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
     ports:
       - '8280:80'
-      - '82ß43:443'
+      - '8243:443'
     volumes:
       - 'baserow_data:/baserow/data'
     dns:
