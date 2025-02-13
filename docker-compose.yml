@@ -3,12 +3,12 @@ services:
   baserow:
     build: .
     ports:
-      - "8280:80"
-      - "8243:443"
+      - "80:80"
+      - "443:443"
     volumes:
       - baserow_data:/baserow/data
     environment:
-      BASEROW_PUBLIC_URL: ${BASEROW_PUBLIC_URL:-http://localhost:8280}
+      BASEROW_PUBLIC_URL: https://baserow-free.automateme.ru
 
 volumes:
   baserow_data:
