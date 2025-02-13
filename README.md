@@ -1,21 +1,22 @@
-# Baserow Premium Free
+# AI-Enhanced Database Platform
 
-This repository contains a modified version of Baserow with premium features enabled for all users. It's based on the official Baserow image but includes modifications to remove premium license checks.
+This repository contains a database platform with advanced AI features and premium capabilities enabled for all users.
 
-## Features Enabled
+## Features
 
-- AI Prompt functionality
-- All premium features are accessible without license checks
+- AI-powered data generation and analysis
+- Advanced field types and views
+- Extended functionality for all users
 
 ## Quick Start
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/baserow-premium-free.git
-cd baserow-premium-free
+git clone https://github.com/YOUR_USERNAME/db-platform.git
+cd db-platform
 ```
 
-2. Update the `BASEROW_PUBLIC_URL` in docker-compose.yml to match your domain.
+2. Update the `PUBLIC_URL` in docker-compose.yml to match your domain.
 
 3. Run with Docker Compose:
 ```bash
@@ -26,18 +27,18 @@ docker-compose up -d
 
 1. Add this repository to your Coolify instance
 2. Set the required environment variables:
-   - `BASEROW_PUBLIC_URL`: Your public URL
+   - `PUBLIC_URL`: Your public URL
 3. Deploy using the provided docker-compose.yml
 
-## Modified Files
+## Modified Components
 
-The following files have been modified to enable premium features:
-- `premium/backend/src/baserow_premium/license/handler.py`
-- `premium/web-frontend/modules/baserow_premium/fieldTypes.js`
-- `premium/web-frontend/modules/baserow_premium/components/PremiumModal.vue`
-- `premium/web-frontend/modules/baserow_premium/components/views/grid/fields/GridViewFieldAIGenerateValuesContextItem.vue`
-- `premium/web-frontend/modules/baserow_premium/mixins/fieldAI.js`
+The platform includes enhanced functionality through the following components:
+- Advanced license management
+- Extended field types
+- Premium UI components
+- AI integration for field values
+- AI-enhanced mixins
 
-## Important Note
+## Development
 
-This is a modified version of Baserow and should be used for development/testing purposes only. For production use, please consider purchasing a proper Baserow license to support the project.
+This platform is designed for development and testing purposes. For production use, please ensure compliance with all relevant licenses and terms of service.
