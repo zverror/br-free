@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      BASEROW_PUBLIC_URL: 'https://baserow.automateme.ru'
+      BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
     ports:
       - "8180:80"
       - "8143:443"
