@@ -10,7 +10,7 @@ COPY premium/web-frontend/modules/baserow_premium/mixins/fieldAI.js /baserow/web
 
 # Устанавливаем необходимые dev-зависимости и собираем frontend
 RUN cd /baserow/web-frontend && \
-    npm install --save-dev @nuxtjs/stylelint-module && \
+    npm install --save-dev @nuxtjs/stylelint-module --legacy-peer-deps && \
     npm run build
 
 # Очищаем dev-зависимости после сборки
