@@ -46,6 +46,206 @@ export class AIFieldType extends FieldType {
     return FieldAISubForm
   }
 
+  getCardComponent(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getCardComponent(field)
+  }
+
+  getRowHistoryEntryComponent(field) {
+    return null
+  }
+
+  getFormViewFieldComponents(field) {
+    return {}
+  }
+
+  getEmptyValue(field) {
+    return null
+  }
+
+  getCardValueHeight(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getCardValueHeight(field)
+  }
+
+  getSort(name, order, field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getSort(name, order, field)
+  }
+
+  getCanSortInView(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getCanSortInView(field)
+  }
+
+  getDocsDataType(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getDocsDataType(field)
+  }
+
+  getDocsDescription(field) {
+    const { i18n } = this.app
+    return i18n.t('premiumFieldType.aiDescription')
+  }
+
+  getDocsRequestExample(field) {
+    return 'read only'
+  }
+
+  getDocsResponseExample(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getDocsResponseExample(field)
+  }
+
+  prepareValueForCopy(field, value) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .prepareValueForCopy(field, value)
+  }
+
+  getContainsFilterFunction(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getContainsFilterFunction(field)
+  }
+
+  getContainsWordFilterFunction(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getContainsWordFilterFunction(field)
+  }
+
+  toHumanReadableString(field, value) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .toHumanReadableString(field, value)
+  }
+
+  getSortIndicator(field, registry) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getSortIndicator(field, registry)
+  }
+
+  canRepresentDate(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .canRepresentDate(field)
+  }
+
+  getCanGroupByInView(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getCanGroupByInView(field)
+  }
+
+  parseInputValue(field, value) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .parseInputValue(field, value)
+  }
+
+  canRepresentFiles(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .canRepresentFiles(field)
+  }
+
+  getHasEmptyValueFilterFunction(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getHasEmptyValueFilterFunction(field)
+  }
+
+  getHasValueContainsFilterFunction(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getHasValueContainsFilterFunction(field)
+  }
+
+  getHasValueContainsWordFilterFunction(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getHasValueContainsWordFilterFunction(field)
+  }
+
+  getHasValueLengthIsLowerThanFilterFunction(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getHasValueLengthIsLowerThanFilterFunction(field)
+  }
+
+  getGroupByComponent(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getGroupByComponent(field)
+  }
+
+  getGroupByIndicator(field, registry) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getGroupByIndicator(field, registry)
+  }
+
+  getRowValueFromGroupValue(field, value) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getRowValueFromGroupValue(field, value)
+  }
+
+  getGroupValueFromRowValue(field, value) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .getGroupValueFromRowValue(field, value)
+  }
+
+  isEqual(field, value1, value2) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .isEqual(field, value1, value2)
+  }
+
+  canBeReferencedByFormulaField(field) {
+    return this.app.$registry
+      .get('aiFieldOutputType', field.ai_output_type)
+      .getBaserowFieldType()
+      .canBeReferencedByFormulaField(field)
+  }
+
+  getGridViewContextItemsOnCellsSelection(field) {
+    return [GridViewFieldAIGenerateValuesContextItem]
+  }
+
   isEnabled(workspace) {
     return Object.values(workspace.generative_ai_models_enabled).some(
       (models) => models.length > 0

@@ -3,7 +3,7 @@
     <a
       class="context__menu-item-link"
       :class="{
-        disabled: !modelAvailable,
+        disabled: !modelAvailable || !hasPremium,
         'context__menu-item-link--loading': loading,
       }"
       @click.prevent.stop="generateAIFieldValues()"

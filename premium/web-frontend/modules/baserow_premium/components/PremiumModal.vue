@@ -1,5 +1,4 @@
 <template>
-  <!-- Empty template to prevent modal from showing -->
   <div></div>
 </template>
 
@@ -20,6 +19,13 @@ export default {
       type: [Object, null],
       required: false,
       default: null,
+    },
+  },
+  computed: {
+    buttonsComponent() {
+      return this.$registry
+        .get('plugin', 'premium')
+        .getPremiumModalButtonsComponent()
     },
   },
 }
