@@ -1,15 +1,14 @@
 version: '3'
 services:
   baserow:
-    container_name: baserow
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - BASEROW_PUBLIC_URL=${BASEROW_PUBLIC_URL:-http://localhost}
     ports:
-      - "80:80"
-      - "443:443"
+      - '8280:80'
+      - '8243:443'
+    environment:
+      - BASEROW_PUBLIC_URL=https://baserow-free.automateme.ru
     volumes:
       - baserow_data:/baserow/data
     restart: unless-stopped
@@ -23,4 +22,4 @@ services:
       - 212.109.195.93
 
 volumes:
-  baserow_data: null
+  baserow_data:
