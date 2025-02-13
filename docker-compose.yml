@@ -1,17 +1,26 @@
-version: '3.4'
+version: '3'
 services:
   baserow:
     container_name: baserow
-    build: .  # Используем локальный Dockerfile вместо image
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
+      - BASEROW_PUBLIC_URL=${BASEROW_PUBLIC_URL:-http://localhost}
     ports:
-      - '8280:80'
-      - '8243:443'
+      - "80:80"
+      - "443:443"
     volumes:
-      - 'baserow_data:/baserow/data'
+      - baserow_data:/baserow/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/api/_health/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     dns:
       - 83.220.169.155
       - 212.109.195.93
+
 volumes:
   baserow_data: null
