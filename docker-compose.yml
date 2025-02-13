@@ -24,7 +24,9 @@ services:
 
   web-frontend:
     container_name: baserow_web_frontend
-    image: baserow/web-frontend:1.21.2
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       BASEROW_PUBLIC_URL: ${BASEROW_FRONTEND_URL}
       BASEROW_BACKEND_HOST: backend
@@ -35,7 +37,7 @@ services:
 
   caddy:
     container_name: baserow_caddy
-    image: baserow/caddy:1.21.2
+    image: caddy:2.7.6
     environment:
       BASEROW_PUBLIC_URL: ${BASEROW_CADDY_URL}
       BASEROW_CADDY_ADDRESSES: ${BASEROW_CADDY_URL}
@@ -45,6 +47,7 @@ services:
     volumes:
       - caddy_config:/config
       - caddy_data:/data
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
     restart: unless-stopped
     depends_on:
       - backend
