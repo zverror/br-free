@@ -4,7 +4,9 @@ version: "3.4"
 services:
   baserow:
     container_name: baserow
-    image: baserow/baserow:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       BASEROW_PUBLIC_URL: 'https://baserow.automateme.ru'
     ports:
