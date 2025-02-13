@@ -1,0 +1,13 @@
+{$BASEROW_CADDY_ADDRESSES}
+
+handle /api/* {
+    reverse_proxy backend:8000
+}
+
+handle /ws/* {
+    reverse_proxy backend:8000
+}
+
+handle /* {
+    reverse_proxy web-frontend:3000
+}
