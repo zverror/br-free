@@ -19,7 +19,7 @@ COPY premium/web-frontend/modules/baserow_premium/mixins/fieldAI.js /baserow/web
 RUN npm run build
 
 # Очищаем dev-зависимости после сборки
-RUN npm prune --production
+RUN npm prune --production --legacy-peer-deps
 
 # Перезапускаем сервисы
 RUN supervisorctl restart all
