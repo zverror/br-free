@@ -1,27 +1,76 @@
 version: '3'
 
 services:
-  baserow:
-    container_name: baserow
+  backend:
+    container_name: baserow_backend
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
+      BASEROW_CADDY_ADDRESSES: 'https://baserow-free.automateme.ru'
+      REDIS_HOST: redis
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: baserow
+      DATABASE_USER: baserow
+      DATABASE_PASSWORD: baserow
+    volumes:
+      - baserow_data:/baserow/data
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  web-frontend:
+    container_name: baserow_web_frontend
+    image: baserow/web-frontend:1.21.2
+    environment:
+      BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
+      BASEROW_BACKEND_HOST: backend
+      BASEROW_BACKEND_PORT: 8000
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+  caddy:
+    container_name: baserow_caddy
+    image: baserow/caddy:1.21.2
+    environment:
+      BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
+      BASEROW_CADDY_ADDRESSES: 'https://baserow-free.automateme.ru'
     ports:
       - '8280:80'
       - '8243:443'
-    environment:
-      BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
     volumes:
-      - baserow_data:/baserow/data
+      - caddy_config:/config
+      - caddy_data:/data
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/api/_health/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    dns:
-      - 83.220.169.155
-      - 212.109.195.93
+    depends_on:
+      - backend
+      - web-frontend
+
+  db:
+    container_name: baserow_db
+    image: postgres:11
+    environment:
+      POSTGRES_DB: baserow
+      POSTGRES_USER: baserow
+      POSTGRES_PASSWORD: baserow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    container_name: baserow_redis
+    image: redis:6
+    volumes:
+      - redisdata:/data
+    restart: unless-stopped
 
 volumes:
   baserow_data:
+  pgdata:
+  redisdata:
+  caddy_config:
+  caddy_data:
