@@ -9,13 +9,45 @@ services:
       dockerfile: Dockerfile
     environment:
       BASEROW_PUBLIC_URL: 'https://baserow-free.automateme.ru'
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: baserow
+      DATABASE_USER: baserow
+      DATABASE_PASSWORD: baserow
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_USER: default
+      REDIS_PASSWORD: baserow
+      REDIS_PROTOCOL: redis
+      BASEROW_ENABLE_ALL_PREMIUM_FEATURES: 'true'
     ports:
       - "8180:80"
       - "8143:443"
     volumes:
       - baserow_data:/baserow/data
+    depends_on:
+      - db
+      - redis
     dns:
       - 83.220.169.155
       - 212.109.195.93
+
+  db:
+    image: postgres:11
+    environment:
+      - POSTGRES_USER=baserow
+      - POSTGRES_PASSWORD=baserow
+      - POSTGRES_DB=baserow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6
+    command: redis-server --requirepass baserow
+    volumes:
+      - redisdata:/data
+
 volumes:
   baserow_data:
+  pgdata:
+  redisdata:
