@@ -1,17 +1,15 @@
-FROM python:3.11-slim as builder
+FROM python:3.9-slim as builder
 
-# Копируем premium плагин
-COPY . /baserow/premium/
+WORKDIR /baserow
+COPY premium/backend /baserow/data/plugins/premium/backend
 
-# Устанавливаем зависимости для сборки
-RUN cd /baserow/premium/backend && \
+RUN pip install --upgrade pip && \
     pip install build && \
+    cd /baserow/data/plugins/premium/backend && \
     python -m build
 
 FROM baserow/baserow:1.22.2
 
-# Копируем собранный плагин
-COPY --from=builder /baserow/premium /baserow/data/plugins/premium/
+COPY --from=builder /baserow/data/plugins/premium/backend/dist/*.whl /baserow/data/plugins/premium/backend/dist/
 
-# Включаем premium функции
 ENV BASEROW_ENABLE_ALL_PREMIUM_FEATURES=true
