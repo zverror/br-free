@@ -23,6 +23,10 @@ services:
       BASEROW_AMOUNT_OF_WORKERS: 1
       BASEROW_ENABLE_SECURE_PROXY_SSL_HEADER: 'true'
       DJANGO_SETTINGS_MODULE: 'baserow.config.settings.base'
+      BASEROW_PLUGIN_GIT_REPOS: ''
+      BASEROW_PLUGIN_URLS: ''
+      BASEROW_BACKEND_DEBUG: 'true'
+      BASEROW_BACKEND_LOG_LEVEL: 'DEBUG'
     ports:
       - "8180:80"
       - "8143:443"
