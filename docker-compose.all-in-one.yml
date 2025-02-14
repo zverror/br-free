@@ -23,6 +23,7 @@ services:
       BASEROW_AMOUNT_OF_WORKERS: 1
       BASEROW_ENABLE_SECURE_PROXY_SSL_HEADER: 'true'
       DJANGO_SETTINGS_MODULE: 'baserow.config.settings.base'
+      BASEROW_PLUGIN_DIR: '/baserow/plugins'
       BASEROW_PLUGIN_GIT_REPOS: ''
       BASEROW_PLUGIN_URLS: ''
       BASEROW_BACKEND_DEBUG: 'true'
