@@ -20,6 +20,9 @@ services:
       REDIS_PASSWORD: baserow
       REDIS_PROTOCOL: redis
       BASEROW_ENABLE_ALL_PREMIUM_FEATURES: 'true'
+      BASEROW_AMOUNT_OF_WORKERS: 1
+      BASEROW_ENABLE_SECURE_PROXY_SSL_HEADER: 'true'
+      DJANGO_SETTINGS_MODULE: 'baserow.config.settings.base'
     ports:
       - "8180:80"
       - "8143:443"
